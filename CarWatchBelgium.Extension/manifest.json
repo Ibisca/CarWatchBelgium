@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "CarWatch Belgium",
+  "version": "0.1.0",
+  "description": "Auto listing scanner for AutoScout24 and Facebook Marketplace",
+  "icons": {
+    "16": "/icon-16.png",
+    "48": "/icon-48.png",
+    "128": "/icon-128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "notifications",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:5003/*",
+    "https://www.autoscout24.be/*",
+    "https://www.facebook.com/*"
+  ],
+  "action": {
+    "default_popup": "/popup.html",
+    "default_title": "CarWatch Belgium"
+  },
+  "background": {
+    "service_worker": "/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.autoscout24.be/*"],
+      "js": ["/content.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://www.facebook.com/marketplace/*"],
+      "js": ["/content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

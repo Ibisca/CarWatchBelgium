@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@types/chrome": "^0.1.43",
+    "vue-tsc": "^3.3.5"
+  }
+}

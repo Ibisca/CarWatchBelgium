@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CarWatchBelgium.Api/CarWatchBelgium.Api.csproj" />
+  <Project Path="CarWatchBelgium.Application/CarWatchBelgium.Application.csproj" />
+  <Project Path="CarWatchBelgium.Domain/CarWatchBelgium.Domain.csproj" />
+  <Project Path="CarWatchBelgium.Infrastructure/CarWatchBelgium.Infrastructure.csproj" />
+</Solution>
